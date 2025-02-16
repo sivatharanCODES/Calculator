@@ -5,7 +5,8 @@
 }
 html,
 body {
-  height: 100%;
+  height: 100vh;
+  font-family: "Orbitron", serif;
 }
 
 body {
@@ -21,11 +22,14 @@ body {
   flex-direction: row;
 }
 .container {
-  position: absolute;
-  width: 500px;
-  height: 700px;
+  max-width: 360px;
   background-color: aliceblue;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px;
 }
 .toggled-container {
   background-color: rgb(29, 29, 29);
@@ -36,20 +40,14 @@ body {
   width: 55px;
   height: 25px;
   background-color: aliceblue;
-  position: absolute;
-  top: 2%;
-  right: -2%;
-  transform: translate(-50%);
   border-radius: 100px;
-
-  /* display: flex;
-  align-items: center; */
   padding: 1px;
   border: 1px solid rgb(255, 0, 170);
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 0 5px;
+  align-self: self-end;
 }
 .toggle:hover {
   cursor: pointer;
@@ -67,6 +65,7 @@ body {
   /* position: absolute; */
   right: 2.5px;
   display: flex;
+
   align-items: center;
   justify-content: center;
 }
@@ -80,4 +79,65 @@ body {
 }
 .toggled-icon {
   color: rgb(255, 0, 170);
+}
+
+/* input container area */
+
+.input-box {
+  width: 100%;
+  height: 90px;
+  background-color: aliceblue;
+  border: none;
+  padding: 10px;
+  text-align: right;
+  font-size: 30px;
+  font-weight: 400;
+  outline: none;
+  color: rgba(0, 0, 0, 0.68);
+  font-family: "Orbitron", serif;
+}
+.control {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 15px;
+}
+.control-dark {
+  color: aliceblue;
+}
+.contaier-btns {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+}
+.con-small {
+  background-color: rgb(227, 233, 245);
+  height: 70px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.zero {
+  grid-column: 2/4;
+}
+
+.pink-btn {
+  background-color: rgb(255, 0, 170);
+  color: aliceblue;
+}
+.dark-theme-input {
+  color: aliceblue;
+  background-color: rgb(29, 29, 29);
+}
+
+.darken-btns {
+  background-color: rgba(240, 248, 255, 0.111);
+  color: aliceblue;
 }
