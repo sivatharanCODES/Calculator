@@ -1,13 +1,32 @@
-document.querySelector(".toggle").addEventListener("click", function () {
-  document.querySelector(".toggle").classList.toggle("toggle-dark");
-  document.querySelector(".toggle-circle").classList.toggle("tc-dark");
-  document.querySelector(".container").classList.toggle("toggled-container");
-  //   document.querySelector(".toggle").style.justifyContent = "flex-start";
-  //   document.querySelector(".container").style.backgroundColor = "black";
-  console.log("toggle clicked");
+"use strict";
+const toggle = document.querySelector(".toggle");
+const container = document.querySelector(".container");
+const toggleCircle = document.querySelector(".toggle-circle");
+const themeIcon = document.querySelector(".fas");
 
-  document.querySelector(".fas").classList.toggle("fa-sun");
-  document.querySelector(".fas").classList.toggle("fa-moon");
-  document.querySelector(".fas").classList.toggle("toggled-icon");
+const init = function () {
+  toggle.classList.remove("toggle-dark");
+  toggleCircle.classList.remove("tc-dark");
+  container.classList.remove("toggled-container");
+  themeIcon.classList.remove("fa-moon");
+  themeIcon.classList.remove("toggled-icon");
+
+  console.log(`init functions executed`);
+};
+
+init();
+
+document.querySelector(".toggle").addEventListener("click", function () {
+  switchTheme();
   //   document.querySelector(".fas").style.color = "rgb(255, 0, 170)";
 });
+
+const switchTheme = function () {
+  toggle.classList.toggle("toggle-dark");
+  toggleCircle.classList.toggle("tc-dark");
+  container.classList.toggle("toggled-container");
+  console.log("toggle clicked");
+  themeIcon.classList.toggle("fa-sun");
+  themeIcon.classList.toggle("fa-moon");
+  themeIcon.classList.toggle("toggled-icon");
+};
